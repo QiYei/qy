@@ -60,7 +60,7 @@
 		}
 	</script>
  </head>
- <body onkeydown="on_return();">
+ <body>
  	<div id="main">
 		<div align="center" style="padding-top: 40px;">
 			<div class="alert alert-warning alert-dismissible" role="alert" align="center" style="width: 300px">
@@ -115,8 +115,8 @@
 
 
 	 	<div align="center" style="padding-top: 30px;">
-			<input style="text-align: center;" id="text" type="text" placeholder="请输入P站图片ID" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="8"><br /><br>
-			<span data-toggle="modal" data-placement="top" title="试试回车键吧~">
+			<input style="text-align: center;" id="text" type="text" placeholder="请输入P站图片ID" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="8"  onkeydown="on_return()"><br /><br>
+			<span data-toggle="modal" data-placement="top" title="">
 				<input id="btn" type="button" onclick="qiye()" value="访&emsp;问" style="font-size: 16px" />
 			</span><br><br><br><br><br><br><br><br><br><br><br><br>
 			<a href="javascript:local('你知道的太多了')">
