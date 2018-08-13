@@ -13,6 +13,7 @@
 	  	input[type='text1']{width:300px;height:35px;margin:10px;border:1px dashed green; border-radius:5px;}
 	  	input[type='text2']{width:300px;height:35px;margin:10px;border:1px dashed green; border-radius:5px;}
 	  	input[type='text3']{width:300px;height:35px;margin:10px;border:1px dashed green; border-radius:5px;}
+		input[type='text4']{width:300px;height:35px;margin:10px;border:1px dashed green; border-radius:5px;}
 		input[type='button']{width:200px;height:35px;margin:10px;border:3px solid green;background-color: black;color: white;opacity: 0.2;}
 
 		* {margin: 0;padding: 0}
@@ -94,11 +95,25 @@
 		    $(" #text3").val("");
 		    }
 		}
+		
+		//---------------------------------------------------------------------------------------3	
+
+		function qiye4() {
+			var txt= document.getElementById("text4").value;
+			if (txt == "") {
+               $('#my4').modal();
+            } else {
+			var google = "http://pan.baidu.com/s/" + txt;
+		    window.location.href = google;
+		    $(" #text4").val("");
+		    }
+		}
 
 		//=======================================================================================
 
 		$(function () {
-		  $('[data-toggle="modal"]').tooltip()
+		  $('[data-toggle="modal"]').tooltip();
+		  $('[data-toggle="popover"]').popover();
 		})
 	</script>
  </head>
@@ -199,6 +214,34 @@
  				</div><!-- /.modal-content -->
  			</div><!-- /.modal-dialog -->
  		</div><!-- /.modal -->
+		
+		<!-- ===========================================================================4========================================================================= -->
+
+ 		<div id="my4" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" style="padding-top: 100px;">
+ 			<div class="modal-dialog modal-sm-12" role="document">
+ 				<div class="modal-content">
+ 					<div class="modal-header">
+ 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ 							<span aria-hidden="true">&times;</span>
+ 						</button>
+ 						<h4 class="modal-title" align="center">百度网盘</h4>
+ 					</div>
+ 					<div class="modal-body" align="center">
+ 						<input tabindex="1" style="text-align: center;" id="text4" type="text4" placeholder="请输入百度网盘分享链接" maxlength="100" 
+ 						data-toggle="popover" data-placement="top" title="Example：" data-content="https://pan.baidu.com/s/
+ 						1zVfvGq98mPoMBk7eId72KQ 比如这个链接，只在输入框输入 1zVfvGq98mPoMBk7eId72KQ 这个就行了"><br />
+ 						<h6 style="color: #b9b9b9;">PS：这里使用不了回车键(=・ω・=)</h6>
+ 						<div class="modal-footer" align="center">
+ 							<a>
+ 								<button id="btn4" type="button4" onclick="qiye4()" class="btn btn-primary col-sm-12" data-dismiss="modal">走你</button>
+ 							</a>
+ 						</div>
+ 					</div>
+ 				</div><!-- /.modal-content -->
+ 			</div><!-- /.modal-dialog -->
+ 		</div><!-- /.modal -->
+
+ 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<!-- P站 -->
 	 	<div align="center" style="padding-top: 100px;">
@@ -208,6 +251,7 @@
 			</span><br><br><br><br><br>
 			<input id="btn1" type="button" onclick="qiye1()" value="哔哩哔哩" style="font-size: 16px" />
 			<input id="btn2" type="button" onclick="qiye2()" value="哔哩直播" style="font-size: 16px" />
+			<input id="btn4" type="button" onclick="qiye4()" value="百度网盘" style="font-size: 16px" />
 			<input id="btn3" type="button" onclick="qiye3()" value="百度一下" style="font-size: 16px" />
 		</div>
 
