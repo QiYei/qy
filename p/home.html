@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.0, user-scalable=no" />
   <title>home屏蔽测试</title>
- </head>
- <body>
-  <h1 align="center">home屏蔽测试</h1>
- </body>
- <script> 
- 	$(document).keydown(function (event) {
+  <script> 
+ 	function hime() {
  		if (event.keyCode == 36) {
  			alert("HOME 禁止")
  			return;
  		}
- 	});
+ 	};
  </script>
+ </head>
+ <body onkeydown="home();">
+  <h1 align="center">home屏蔽测试</h1>
+ </body>
 </html>
