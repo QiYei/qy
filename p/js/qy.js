@@ -102,7 +102,6 @@ window.onload = function(){
     };
     //屏蔽鼠标右键
     document.oncontextmenu = function (){
-    	alert("该网站拒绝此操作");
         return false;
     }
 }
